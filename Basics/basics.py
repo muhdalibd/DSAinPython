@@ -80,23 +80,108 @@
         is_student => Snake Case (Prefered in Python)
         isStudent => Lower Camel Case
 '''
-#   String
+
+'''   String   '''
 name = "Isha"
 # print(type(name))   # <class 'str'>
-#   Integer
+'''   Integer  '''
 roll_no = 17
 # print(type(roll_no))    # <class 'int'>
-#   Float
+'''   Float    '''
 percentage = 95.8
 # print(type(percentage)) # <class 'float'>
-#   Boolean
+'''   Boolean  '''
 is_student = True
 # print(type(is_student)) # <class 'bool'>
 
 # print(name, roll_no, percentage, is_student)
-#   Updating the value:
+
+'''   Updating the value:   '''
 # percentage = 94
 # print(name, roll_no, percentage, is_student)
 
+'''   Printing with additional words  '''
+# print("My name is " + name)   # Concatinate String
+# print("My roll number is " + roll_no)     # TypeError: roll-no is Integer
+# print("My roll number is ", roll_no)    # Right
+# print("I scored", percentage, "% in my final exams.")
+
+'''   Printing Expressions   '''
+# print("My percentage has changed to", percentage - 5.0)
+
+'''   Printing with Seperator   '''
+# print(name, roll_no, percentage, is_student, sep="-")
+# x = 1
+# y = 2
+# z = 3
+# print(x,y,z, sep=" -> ")
+
+
 #   Keywords in Python:
 #       Search in Internet.
+
+
+#   Python Data Types
+'''
+    1. Numeric => (Integer, Float, Complex Number)
+    2. Boolean ==> (True or False)
+    3. Sequence Type => (String, List, Tuple,)
+    4. Dictionary => (Key value pairs stored)
+    5. Set => (Unorder collection of unique items)
+    6. None => NULL value
+'''
+
+
+#   ASCII & Unicode Values
+'''
+    ASCII => American Standard Code for Information Interchange.
+    '        Represent Characters as Numeric Codes.
+        A - Z ==> 65 - 90
+        a - z ==> 97 - 112
+        0 - 9 ==> 48 - 57
+        Space ==> 32
+'''
+'''   ord( ) Function ==> Return ASCII value of a character    '''
+# char = ' '
+# print(ord(char))  # 32
+
+'''   chr( ) Function ==> Opposite of ord( ) function  '''
+# ascii = 67
+# print(chr(ascii))   # C
+
+
+
+'''   Taking Input from User   '''
+# name = input("Enter your name: ")   # input() ==> always captured as string
+# print("Your name is " + name)
+
+
+'''   Typecasting  '''
+#       process of converting one data type to another.
+
+# age = input("Enter your age: ")
+# print(type(age))    # <class 'str'>
+# age = int(input("Enter your age: "))
+# print(type(age))    # <class 'int'>
+
+'''   Exercise   '''
+#   Sum of Two Given Numbers:
+# num1 = int(input("Enter first number: "))
+# num2 = int(input("Enter second number: "))
+# sum = num1 + num2
+# print("Summation =", sum)
+
+
+
+#   Operators:
+'''
+    1. Arithmetic Operators ==> (+, -, *, /, %, **, //)
+    #       ==> ** (Exponential) = (4 ** 3 -> 64) == (4 * 4 * 4 -> 64) &
+    #       ==> // (Floor Division) = return nearest whole number (4//3 --> 1)
+    2. Assignment Operators ==> (=, +=, -=, *=, /=, %=, **=, //=, &=, |=, ^=, >>=, <<=)
+    3. Comparison Operators
+    4. Logical Operators
+    5. Identity Operators
+    6. Membership Operators
+    7. Bitwise Operators
+'''
