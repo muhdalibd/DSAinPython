@@ -22,7 +22,8 @@
 # print("Hello World!")
 
 
-''' Chapter 1: Basics
+''' 
+#   Chapter 1: Basics
     01. Basics Program
     02. Python CLI
     03. Comments
@@ -34,7 +35,8 @@
     09. Taking Input
     10. Operators
     11. Typecasting & type() function
-    12. Hierarchy'''
+    12. Hierarchy
+'''
 
 
 #   Basic Program in Python
@@ -47,7 +49,8 @@
 ''' Command Line Interface
         Command => python3 (for Start)
         REPL => Read Evaluate Print Loop
-        Command => exit() or ^D '''
+        Command => exit() or ^D
+'''
 
 
 
@@ -57,8 +60,9 @@
 
 #   Python Indentation
 '''print("Hello World!")
-    print("Hello World") # This is called Indentation Error'''
+    print("Hello World") # This is called Indentation Error
 #   Indentation => Tab Space Basicaly
+'''
 
 
 #   Variables and their Declarations
@@ -176,12 +180,67 @@ is_student = True
 #   Operators:
 '''
     1. Arithmetic Operators ==> (+, -, *, /, %, **, //)
-    #       ==> ** (Exponential) = (4 ** 3 -> 64) == (4 * 4 * 4 -> 64) &
-    #       ==> // (Floor Division) = return nearest whole number (4//3 --> 1)
-    2. Assignment Operators ==> (=, +=, -=, *=, /=, %=, **=, //=, &=, |=, ^=, >>=, <<=)
+            ==> ** (Exponential) = (4 ** 3 -> 64) == (4 * 4 * 4 -> 64) &
+            ==> // (Floor Division) = return nearest whole number (4//3 --> 1)
+    2. Assignment Operators 
+            ==> (=, +=, -=, *=, /=, %=, **=, //=, &=, |=, ^=, >>=, <<=)
     3. Comparison Operators
+            ==> (==, !=, >, <, >=, <=) ==> Output: True or False
     4. Logical Operators
+            ==> (and = return TRUE if both statements are TRUE,
+                 Or  = return TRUE if one of the statements are TRUE,
+                 Not = reverse the result, return False if the result is TRUE)
     5. Identity Operators
+            ==> (is     = return TRUE if both variables are the same object,
+                 is not = return TRUE if both variables are not the same object)
     6. Membership Operators
+            ==> (in     = return TRUE if a sequence with the specified value is present in the object,
+                 not in = return TRUE if a sequence with the specified value is not present in the object)
     7. Bitwise Operators
+            ==> (& (AND), | (OR), ^ (XOR), ~ (NOT), << (Zero fill left shift), >> (Signed right shift))
 '''
+
+'''   Arithmetic Operators:   '''
+# print("summation:", 4+3)
+# print("difference:", 4-3)
+# print("product:", 4*3)
+# print("division:", 4/3)
+# print("reminder:", 4%3)
+# print("floor division:", 4//3)
+# print("exponential:", 4**3)
+
+'''   Assignment Operator:    '''
+# n1 = 5
+# n2 = n1
+# print(n1, n2)
+# n2 += n1
+# print(n1, n2)
+# n2 -= n1
+# print(n1, n2)
+# n2 *= n1
+# print(n1, n2)
+# n2 /= n1
+# print(n1, n2)
+
+'''   Comparison Operators   '''
+# n1 = 4
+# n2 = 3
+# print(n1 > n2)  #   True
+
+'''   Logical Operators   '''
+# expression1 = 2 > 1   # TRUE
+# expression2 = 5 < 4   # FALSE
+# print("e1 and e2:", expression1 and expression2)
+# print("e1 or e2:", expression1 or expression2)
+# print("not of e1", not(expression1))
+
+'''   Identity Operators   '''
+# x = 5
+# y = 4
+# print("x is y:", x is y)
+# print("x is not y:", x is not y)
+
+'''   Membership Operators  '''
+# fruits = ["apple", "banana", "cherry"]
+# print("If banana is present in fruits:", "banana" in fruits)
+# print("If mango is present in fruits:", "mango" in fruits)
