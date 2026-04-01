@@ -24,10 +24,20 @@
         parts that require fast computation are written in C or C++.
 '''
 
+#   Python List
+# my_list = [1,2,3,4,5]
+# print(my_list)
+# my_list = my_list * 2
+# print(my_list)
 
 
 import numpy as np  #   NumPy is usually imported under the np alias.
 # alias: In Python alias are an alternate name for referring to the same thing.
+
+#   Numpy Arrays
+# arr = np.array([1,2,3,4,5])
+# arr = arr * 2
+# print(arr)
 
 '''
     🟧  Checking NumPy Version
@@ -147,3 +157,149 @@ arr = np.array([
     [[7, 8, 9], [10, 11, 12]]
 ])
 # print(arr[-2,-1,-1])
+
+
+
+'''
+    🟧  Slicing arrays
+    Slicing in python means taking elements from one given index to another given index.
+    We pass slice instead of index like this:   [start:end].
+    We can also define the step, like this:     [start:end:step].
+    If we don't pass start its considered 0
+    If we don't pass end its considered length of array in that dimension
+    If we don't pass step its considered 1
+'''
+
+arr = np.array([1,2,3,4,5,6,7])
+# print(arr[1:5])
+# print(arr[4: ])
+# print(arr[:4 ])
+# print(arr[1:5:3])
+# print(arr[ : :2])
+
+'''
+    🟧  Slicing 2-D Arrays
+'''
+arr = np.array([
+    [1,2,3,4,5],
+    [6,7,8,9,10]
+])
+# print(arr[1,1:4])
+# print(arr[0:2,2])
+
+'''
+    🟧  Negative Slicing
+'''
+
+arr = np.array([
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+])
+# print(arr[-3:-1, 2])    #   [start : stop] =>   stop > start
+
+
+'''
+    🟧  NumPy Data Types
+    👉  Data Types in Python
+    By default Python have these data types:
+
+    strings - used to represent text data, the text is given under quote marks. e.g. "ABCD"
+    integer - used to represent integer numbers. e.g. -1, -2, -3
+    float - used to represent real numbers. e.g. 1.2, 42.42
+    boolean - used to represent True or False.
+    complex - used to represent complex numbers. e.g. 1.0 + 2.0j, 1.5 + 2.5j
+
+    👉  Data Types in NumPy
+    NumPy has some extra data types, and refer to data types with one character,
+        like i for integers, u for unsigned integers etc.
+    Below is a list of all data types in NumPy and the characters used to represent them.
+
+    i - integer
+    b - boolean
+    u - unsigned integer
+    f - float
+    c - complex float
+    m - timedelta
+    M - datetime
+    O - object
+    S - string
+    U - unicode string
+    V - fixed chunk of memory for other type ( void )
+'''
+
+'''
+    🟧  Checking the Data Type of an Array
+    The NumPy array object has a property called dtype that returns the data type of the array:
+'''
+
+arr = np.array([1,2,3,4,5])
+# print(arr.dtype)
+arr = np.array(["apple", "banana", "chery"])
+# print(arr.dtype)
+
+'''
+    Creating Arrays With a Defined Data Type
+'''
+arr = np.array([1,2,3,4,5], dtype='S')  #   i, u, f, S and U
+# print(arr)
+# print(arr.dtype)
+# arr = np.array(['a', '2', '3'], dtype='i')  #   ValueError
+
+'''
+    Converting Data Type on Existing Arrays
+    The best way to change the data type of an existing array, is to make a copy
+    of the array with the astype() method.
+    The astype() function creates a copy of the array, and allows you to specify
+    the data type as a parameter.
+'''
+arr = np.array([1.1, 2.1, 3.1])
+newarr = arr.astype(int)    #   int64
+newarr = arr.astype('i')    #   int32
+newarr = arr.astype(bool)
+# print(newarr)
+# print(newarr.dtype)
+
+
+'''
+    🟧  NumPy Array Copy vs View
+    The Difference Between Copy and View
+    The main difference between a copy and a view of an array is that
+        the copy is a new array, and the view is just a view of the original array.
+    The copy owns the data and any changes made to the copy will not affect
+        original array, and any changes made to the original array will not affect the copy.
+    The view does not own the data and any changes made to the view will affect
+        the original array, and any changes made to the original array will affect the view.
+'''
+#   COPY
+arr = np.array([1, 2, 3, 4, 5])
+x = arr.copy()
+arr[0] = 42
+# print(arr)
+# print(x)
+
+#   VIEW
+arr = np.array([1, 2, 3, 4, 5])
+x = arr.view()
+arr[0] =42
+x[2] = 31
+# print(arr)
+# print(x)
+
+'''
+    Check if Array Owns its Data
+    As mentioned above, copies owns the data, and views does not own the data,
+        but how can we check this?
+    Every NumPy array has the attribute base that returns None if the array owns the data.
+    Otherwise, the base  attribute refers to the original object.
+'''
+arr = np.array([1, 2, 3, 4, 5])
+x = arr.copy()
+y = arr.view()
+# print(x.base)
+# print(y.base)
+
+
+'''
+
+'''
