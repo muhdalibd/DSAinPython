@@ -1,246 +1,345 @@
-### Introduction to Programming
-#   Programming == creating a set of instructions - that tells
-#       a computer how to perform a task.
-#       Those set of instruction called => Program
-
-#   In Python Programming Language:
-#       Source Code => Compiler => Byte Code => Interpreter => Mechine Code
-
-
-
-### Introduction to Python and DSA
-#   One of the most famous language
-#   Easy to learn & understand
-#   Beginer friendly
-#   Concise Code & Open Source
-#   Versatile => Web Dep., AI/ML, Data Science, Data Analytics, IOT
-
-#   Download => VS Code & Python
-
-
-### Starting with Python
 # print("Hello World!")
+# print('Hello World!')   # prefer double quote
 
+#   This is my first Python Program.
 
-''' 
-#   Chapter 1: Basics
-    01. Basics Program
-    02. Python CLI
-    03. Comments
-    04. Indentation
-    05. Variables
-    06. Keywords in Python
-    07. Data Types
-    08. ASCII and Unicode
-    09. Taking Input
-    10. Operators
-    11. Typecasting & type() function
-    12. Hierarchy
+# print("I like pizza.")
+# print("It's really good.")
+
 '''
-
-
-#   Basic Program in Python
-# print("Hello World!")
-#   How to move to next line
-# print("Hello,\nWorld!")
-
-
-#   Pyhon CLI
-''' Command Line Interface
-        Command => python3 (for Start)
-        REPL => Read Evaluate Print Loop
-        Command => exit() or ^D
+    # Variable = A container for a value (string, integer, float, boolean)
+    '            A variable behaves as if it was the value it contains.
 '''
 
 
 
-#   Python Comments
-'''This is a multi line comment'''
+''' String  '''
+
+# first_name = "Bro"
+# # first_name = 'Bro'  #   prefer double quote
+# food = "pizza"
+# email = "bro123@fake.com"
+
+# print(first_name)
+# print(f"Hello, {first_name}.")
+# print(f"You like {food}.")
+# print(f"Your e-mail is: {email}")
 
 
-#   Python Indentation
-'''print("Hello World!")
-    print("Hello World") # This is called Indentation Error
-#   Indentation => Tab Space Basicaly
+
+''' Integers  '''
+
+# age = 25
+# quantity = 3
+# num_of_students = 30
+
+# print(f"You are {age} years old.")
+# print(f"You are buying {quantity} items.")
+# print(f"Your class has {num_of_students} students.")
+
+
+
+''' Float   '''
+
+
+# price = 10.99
+# gpa = 3.2
+# distance = 5.5
+
+# print(f"The price is ${price}.")
+# print(f"Your CGPA is {gpa}.")
+# print(f"You walked at {distance} km.")
+
+
+
+''' Boolean '''
+
+
+# is_student = False
+# # print(f"Are you a student?: {is_student}")
+# if is_student:
+#     print("You are a student.")
+# else:
+#     print("You are not enrolled.")
+
+
+# for_sale = True
+# if for_sale:
+#     print("That item is for sale.")
+# else:
+#     print("That item is NOT available.")
+
+
+# is_online = True
+# if is_online:
+#     print("You are online.")
+# else:
+#     print("You are offline.")
+
+
+
+'''
+    Typecasting = The process of converting a variable form one data type to another
+    '               str(), int(), float(), bool()
+'''
+
+# name = "Bro Code"
+# age = 25
+# gpa = 3.2
+# is_student = True
+
+# print(type(name))
+# print(type(age))
+# print(type(gpa))
+# print(type(is_student))
+
+# gpa = int(gpa)
+# print(type(gpa))
+# print(gpa)
+
+# age = str(age)
+# print(type(age))
+# print(age)  #   25
+
+# age += "1"
+# age += 1    #   Cann't Concatinate with Integer
+# print(age)  #   251
+
+# # name = ""
+# name = bool(name)
+# print(type(name))
+# print(name)
+
+
+
+'''
+    input() = A function that prompts user to enter data
+    '         Returns the entered data as a String.
+'''
+
+# name = input("What is your name?: ")
+# age = input("How old are you?: ")
+# print(f"Hello, {name}.")
+# print(f"You are {age} years old.")
+
+# # age = age + 1   #   can only concatenate str (not "int") to str
+# print("Happy Birthday!")
+
+# age = int(input("How old are you?: "))
+# age += 1
+# print(f"You are {age} years old.")
+
+
+'''
+    EXERCISE 01: Rectangle Area Calc
+'''
+
+# length = float(input("Enter the length: "))
+# width = float(input("Enter the width: "))
+# area = length * width
+# print(f"The area is {area} cm²")    #   NumLock + Alt + 0178
+
+
+'''
+    🟧  EXERCISE 02: Shopping Card Program
+'''
+
+# item = input("What item would you like to buy?: ")
+# price = float(input("What is the price?: "))
+# quantity = int(input("How many would you like?: "))
+# total = price * quantity
+# print(f"You have bought {quantity} x {item}/s")
+# print(f"You have to pay ${total}")
+
+
+'''
+    Madlibs Game
+    '   Word game where you create a story
+    '   by filling in blanks with random words
+'''
+
+# adjective1 = input("Enter an adjective (description): ")
+# noun1 = input("Enter a noun (persion, place, thing): ")
+# adjective2 = input("Enter an adjective (description): ")
+# verb1 = input("Enter a verb ending with 'ing': ")
+# adjective3 = input("Enter an adjective (description): ")
+
+# print(f"Today I went to a {adjective1} zoo.")
+# print(f"In an exhibit, I saw a {noun1}")
+# print(f"{noun1} was {adjective2} and {verb1}")
+# print(f"I was {adjective3}")
+
+
+'''
+    Arithmetic Operators
+'''
+
+# friends = 5
+# friends = friends + 1
+# friends += 1
+# friends = friends - 2
+# friends -= 2
+# friends = friends * 3
+# friends *= 3
+# friends = friends / 2
+# friends /= 2
+# friends = friends ** 2
+# friends **= 3
+# print(friends)
+# remainder = friends % 2
+# print(remainder)
+
+
+''' Some Important Function '''
+
+
+# x = 3.14
+# y = -4
+# z = 5
+
+# result = round(x)   #  3
+# result = abs(y)     #  4
+# result = pow(4, 3)  # 64
+# result = max(x, y, z)  # 5
+# result = min(x, y, z)  # -4
+# print(result)
+
+
+'''   Some Important Math Function  '''
+
+
+# import math
+# x = 9.1
+# print(math.pi)
+# print(math.e)
+# result = math.sqrt(x)
+# result = math.ceil(x)   # round next integer
+# result = math.floor(x)  # round previous int 
+# print(result)
+
+
+
+'''
+    EXERCISE 03: Cercumference of Circle
+'''
+
+# import math
+# radius =  float(input("Enter the radius of a circle ?: "))
+# circumference = 2 * math.pi * radius
+# print(f"The circumference is {round(circumference, 2)} cm.")
+
+
+
+'''
+    EXERCISE 04: Area of Circle
+'''
+
+# import math
+# radius =  float(input("Enter the radius of a circle ?: "))
+# area = math.pi * pow(radius, 2)
+# print(f"The area of the circle is {round(area, 2)} cm².")
+
+
+
+'''
+    EXERCISE 05: Hypotenous of Right Angle
+'''
+
+# import math
+# a =  float(input("Enter side A ?: "))
+# b =  float(input("Enter side B ?: "))
+# c = math.sqrt(pow(a, 2) + pow(b, 2))
+# print(f"The side C of right angle is: {c}.")
+
+
+
+
+'''
+    if = Do some if some condition is True
+    '    Else do something else
 '''
 
 
-#   Variables and their Declarations
-'''
-    Variables => container used to store data.
-        In programming container means Memory Space.
-    Data can be different types. (Integer, Float, String, Boolean, NULL)
-    In Python, Variables do not need to be declared with any particular type.
-            Python is dynamically typed.
-'''
-#   Variable Naming Rules:
-'''
-    1. A variable name must start with a letter or underscore character.
-    2. A variable name cannot start with a number.
-    3. A variable name can only contain alphanumeric and underscores (A-z,0-9,_)
-    4. Variable names are case-sensitive (count, Count & COUNT are three different variables)
-    5. A variable name cannot be any of the Python Keywords.
-
-        is_student => Snake Case (Prefered in Python)
-        isStudent => Lower Camel Case
-'''
-
-'''   String   '''
-name = "Isha"
-# print(type(name))   # <class 'str'>
-'''   Integer  '''
-roll_no = 17
-# print(type(roll_no))    # <class 'int'>
-'''   Float    '''
-percentage = 95.8
-# print(type(percentage)) # <class 'float'>
-'''   Boolean  '''
-is_student = True
-# print(type(is_student)) # <class 'bool'>
-
-# print(name, roll_no, percentage, is_student)
-
-'''   Updating the value:   '''
-# percentage = 94
-# print(name, roll_no, percentage, is_student)
-
-'''   Printing with additional words  '''
-# print("My name is " + name)   # Concatinate String
-# print("My roll number is " + roll_no)     # TypeError: roll-no is Integer
-# print("My roll number is ", roll_no)    # Right
-# print("I scored", percentage, "% in my final exams.")
-
-'''   Printing Expressions   '''
-# print("My percentage has changed to", percentage - 5.0)
-
-'''   Printing with Seperator   '''
-# print(name, roll_no, percentage, is_student, sep="-")
-# x = 1
-# y = 2
-# z = 3
-# print(x,y,z, sep=" -> ")
-
-
-#   Keywords in Python:
-#       Search in Internet.
-
-
-#   Python Data Types
-'''
-    1. Numeric => (Integer, Float, Complex Number)
-    2. Boolean ==> (True or False)
-    3. Sequence Type => (String, List, Tuple,)
-    4. Dictionary => (Key value pairs stored)
-    5. Set => (Unorder collection of unique items)
-    6. None => NULL value
-'''
-
-
-#   ASCII & Unicode Values
-'''
-    ASCII => American Standard Code for Information Interchange.
-    '        Represent Characters as Numeric Codes.
-        A - Z ==> 65 - 90
-        a - z ==> 97 - 112
-        0 - 9 ==> 48 - 57
-        Space ==> 32
-'''
-'''   ord( ) Function ==> Return ASCII value of a character    '''
-# char = ' '
-# print(ord(char))  # 32
-
-'''   chr( ) Function ==> Opposite of ord( ) function  '''
-# ascii = 67
-# print(chr(ascii))   # C
-
-
-
-'''   Taking Input from User   '''
-# name = input("Enter your name: ")   # input() ==> always captured as string
-# print("Your name is " + name)
-
-
-'''   Typecasting  '''
-#       process of converting one data type to another.
-
-# age = input("Enter your age: ")
-# print(type(age))    # <class 'str'>
 # age = int(input("Enter your age: "))
-# print(type(age))    # <class 'int'>
+# if age >= 100:
+#     print("You are too old to sign up!")
+# elif age >= 18:
+#     print("You are now signed up!")
+# elif age <= 0:
+#     print("You haven't been born yet!")
+# else:
+#     print("You must be 18+ to sign up.")
 
-'''   Exercise   '''
-#   Sum of Two Given Numbers:
-# num1 = int(input("Enter first number: "))
-# num2 = int(input("Enter second number: "))
-# sum = num1 + num2
-# print("Summation =", sum)
+
+# responce = input("Would you like food? (Y/N): ")
+# if responce == "Y":
+#     print("Have some food!")
+# else:
+#     print("No food for you!")
+
+
+# name = input("Enter your name: ")
+# if name == "":
+#     print("You did not type your name!")
+# else:
+#     print(f"Hello, {name}")
+
+
+# for_sale = True
+# if for_sale:
+#     print("This item  is for sale.")
+# else:
+#     print("This item is NOT available.")
+
+
+# online = False
+# if online:
+#     print("The user is online.")
+# else:
+#     print("The user is offline.")
 
 
 
-#   Operators:
 '''
-    1. Arithmetic Operators ==> (+, -, *, /, %, **, //)
-            ==> ** (Exponential) = (4 ** 3 -> 64) == (4 * 4 * 4 -> 64) &
-            ==> // (Floor Division) = return nearest whole number (4//3 --> 1)
-    2. Assignment Operators 
-            ==> (=, +=, -=, *=, /=, %=, **=, //=, &=, |=, ^=, >>=, <<=)
-    3. Comparison Operators
-            ==> (==, !=, >, <, >=, <=) ==> Output: True or False
-    4. Logical Operators
-            ==> (and = return TRUE if both statements are TRUE,
-                 Or  = return TRUE if one of the statements are TRUE,
-                 Not = reverse the result, return False if the result is TRUE)
-    5. Identity Operators
-            ==> (is     = return TRUE if both variables are the same object,
-                 is not = return TRUE if both variables are not the same object)
-    6. Membership Operators
-            ==> (in     = return TRUE if a sequence with the specified value is present in the object,
-                 not in = return TRUE if a sequence with the specified value is not present in the object)
-    7. Bitwise Operators
-            ==> (& (AND), | (OR), ^ (XOR), ~ (NOT), << (Zero fill left shift), >> (Signed right shift))
+    EXERCISE 06: Python Calculator
 '''
 
-'''   Arithmetic Operators:   '''
-# print("summation:", 4+3)
-# print("difference:", 4-3)
-# print("product:", 4*3)
-# print("division:", 4/3)
-# print("reminder:", 4%3)
-# print("floor division:", 4//3)
-# print("exponential:", 4**3)
+# operator = input("Enter an operator (+ - * /): ")
+# num1 = float(input("Enter the 1st number: "))
+# num2 = float(input("Enter the 2nd number: "))
 
-'''   Assignment Operator:    '''
-# n1 = 5
-# n2 = n1
-# print(n1, n2)
-# n2 += n1
-# print(n1, n2)
-# n2 -= n1
-# print(n1, n2)
-# n2 *= n1
-# print(n1, n2)
-# n2 /= n1
-# print(n1, n2)
+# result = 0
 
-'''   Comparison Operators   '''
-# n1 = 4
-# n2 = 3
-# print(n1 > n2)  #   True
+# if operator == "+":
+#     result = num1 + num2
+# elif operator == "-":
+#     result = num1 - num2
+# elif operator == "*":
+#     result = num1 * num2
+# elif operator == "/":
+#     result = num1 / num2
+# else:
+#     print("Enter valid operator.")
 
-'''   Logical Operators   '''
-# expression1 = 2 > 1   # TRUE
-# expression2 = 5 < 4   # FALSE
-# print("e1 and e2:", expression1 and expression2)
-# print("e1 or e2:", expression1 or expression2)
-# print("not of e1", not(expression1))
+# print(f"{num1} {operator} {num2} = {round(result, 2)}")
 
-'''   Identity Operators   '''
-# x = 5
-# y = 4
-# print("x is y:", x is y)
-# print("x is not y:", x is not y)
 
-'''   Membership Operators  '''
-# fruits = ["apple", "banana", "cherry"]
-# print("If banana is present in fruits:", "banana" in fruits)
-# print("If mango is present in fruits:", "mango" in fruits)
+
+'''
+    EXERCISE 07: Python Weight Converter
+'''
+
+# weight = float(input("Enter your weight: "))
+# unit = input("Kilograms or Pound? (K or L): ")
+
+# if unit == "K":
+#     weight = weight * 2.205
+#     unit = "Libs."
+#     print(f"Your weight is {round(weight, 2)} {unit}.")
+# elif unit == "L":
+#     weight = weight / 2.205
+#     unit = "Kgs."
+#     print(f"Your weight is {round(weight, 2)} {unit}.")
+# else:
+#     print(f"{unit} was not valid.")
+
