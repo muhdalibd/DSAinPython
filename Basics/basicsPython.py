@@ -343,3 +343,45 @@
 # else:
 #     print(f"{unit} was not valid.")
 
+'''
+    EXERCISE 08: ⭐ Temperature Conversion 🌡️
+'''
+
+# temp = float(input("Enter the value of temperature: "))
+# unit = input("Enter temperature unit (F/C): ")
+
+# if unit == 'F':
+#     result = (5/9)*(temp-32)
+#     print(f"The Temperature in Celsius is: {round(result,2)}°C")
+# elif unit == 'C':
+#     result = (9/5)*temp + 32
+#     print(f"The Temperature in Fahrenheit is: {round(result,2)}°F")
+# else:
+#     print(f"{unit} is a invalid unit of measurement")
+
+
+'''
+    Logical Operators = Evaluate multiple conditions (or, and, not)
+    '                   or  = at least one condition must be true
+    '                   and = both conditions must be True
+    '                   not = inverts the condition (not False, not True)
+'''
+
+# temp = 25
+# is_raining = True
+
+# if temp > 35 or temp < 0 or is_raining:
+#     print("The outdoor event is cancelled.")
+# else:
+#     print("The outdoor event is still scheduled.")
+
+
+temp = 25
+is_sunny = True
+
+if temp > 28 and is_sunny:
+    print("It is HOT outside.")
+elif temp <=0 and is_sunny:
+    print("It is COLD outside.")
+else:
+    print("It is SUNNY.")
